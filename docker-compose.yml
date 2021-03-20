@@ -24,9 +24,9 @@ services:
       - db
   frontend:
     build: ./clients
-    container_name: frontend
+    container_name: clients
     volumes:
-      - ./frontend:/app
+      - ./clients:/app
       - /app/node_modules      
     ports:
       - '8080:8080'

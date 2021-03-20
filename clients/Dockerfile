@@ -1,7 +1,7 @@
 FROM node:12.2.0-alpine
 
 # set working directory
-WORKDIR /client
+WORKDIR /clients
 
 COPY package*.json ./
 
