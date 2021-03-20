@@ -10,11 +10,9 @@ services:
     ports:
     - "5432:5432"
   web:
-    build: .
+    build: ./BE
     container_name: backend
     command: python manage.py runserver --noreload --nothreading 0.0.0.0:8000
-    volumes:
-      - .:/code
     ports:
       - "8000:8000"
       - "3000-3020:3000-3020"
@@ -23,4 +21,3 @@ services:
       - DJANGO_DEBUGGER=True
     depends_on:
       - db
-    ui:
