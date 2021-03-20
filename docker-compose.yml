@@ -23,7 +23,7 @@ services:
     depends_on:
       - db
   frontend:
-    build: ./client
+    build: ./clients
     container_name: frontend
     volumes:
       - ./frontend:/app
